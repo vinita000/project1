@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  start_date: 2020-01-07 19:26:05
+  end_date: 2020-01-07 19:26:05
+  cost_of_project: MyString
+  status: 1
+  customer: one
+
+two:
+  title: MyString
+  description: MyText
+  start_date: 2020-01-07 19:26:05
+  end_date: 2020-01-07 19:26:05
+  cost_of_project: MyString
+  status: 1
+  customer: two

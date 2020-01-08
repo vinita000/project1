@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start_Date</th>
+      <th>End_Date</th>
+      <th>Cost_Of_Project</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projectts.each do |projectt| %>
+      <tr>
+        <td><%= projectt.title %></td>
+        <td><%= projectt.description %></td>
+        <td><%= projectt.start_date %></td>
+        <td><%= projectt.end_date %></td>
+        <td><%= projectt.cost_of_proect %></td>
+        <td><%= projectt.status %></td>
+      </tr>  
+    <% end %>
+  </tbody>
+</table>

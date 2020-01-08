@@ -9,4 +9,15 @@ class ApplicationController < ActionController::Base
             devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :moile, :email, :password) }
             devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :mobile, :email, :password, :current_password) }
         end 
+
+        def after_sign_in_path_for(resource)
+       
+            if resource.role == Customer
+              root_path
+            elsif resource.role == Admin
+              root_path 
+            else
+              root_path
+            end
+        end
 end
