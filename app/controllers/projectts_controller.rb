@@ -7,9 +7,11 @@ class ProjecttsController < ApplicationController
         @projectt = Projectt.new(projectt_params)
         if @projectt.save
             redirect_to @projectt
+            UserMailer.with(user: @user).notification.deliver_now
         else
             render 'new'
         end  
+        
     end    
 
     def index
